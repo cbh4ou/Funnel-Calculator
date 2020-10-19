@@ -8,7 +8,7 @@ name = "pypi"
 Flask = "==1.1.2"
 Werkzeug = "==1.0.1"
 click = ">=5.0"
-cffi = "--1.14.3"
+cffi = "==1.14.3"
 
 # Database
 Flask-SQLAlchemy = "==2.4.4"
