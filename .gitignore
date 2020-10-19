@@ -48,9 +48,6 @@ env/
 # npm
 /node_modules/
 
-# webpack-built files
-/my_flask_app/static/build/
-
 # Configuration
 .env
 
