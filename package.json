@@ -16,19 +16,14 @@
     "flask-static-digest": "pipenv run flask digest compile",
     "lint": "eslint \"assets/js/*.js\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cbh4ou/my_flask_app.git"
-  },
   "author": "connor hatcher",
   "license": "MIT",
   "engines": {
-    "node": ">=12"
+    "node": "12.x"
   },
   "bugs": {
     "url": "https://github.com/cbh4ou/my_flask_app/issues"
   },
-  "homepage": "https://github.com/cbh4ou/my_flask_app#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.0",
     "bootstrap": "^4.5.2",
