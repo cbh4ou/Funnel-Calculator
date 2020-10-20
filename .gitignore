@@ -6,7 +6,6 @@
 # Packages
 *.egg
 *.egg-info
-build
 eggs
 parts
 bin
@@ -46,7 +45,7 @@ docs/_build
 env/
 
 # npm
-/node_modules/
+node_modules
 
 # Configuration
 .env
