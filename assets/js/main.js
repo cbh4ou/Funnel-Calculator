@@ -9,6 +9,7 @@ require('@fortawesome/fontawesome-free');
 require('jquery');
 require('popper.js');
 require('bootstrap');
+require('chart.js');
 
 require.context(
   '../img', // context folder
@@ -19,3 +20,6 @@ require.context(
 // Your own code
 require('./plugins.js');
 require('./script.js');
+require('./sb-admin-2.js');
+require('./demo/chart-pie-demo.js');
+require('./demo/chart-area-demo.js');

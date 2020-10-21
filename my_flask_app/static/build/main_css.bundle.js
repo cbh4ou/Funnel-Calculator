@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/css/sb-admin-2.css":
+/*!***********************************!*\
+  !*** ./assets/css/sb-admin-2.css ***!
+  \***********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hc3NldHMvY3NzL3NiLWFkbWluLTIuY3NzP2MzNTYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQSIsImZpbGUiOiIuL2Fzc2V0cy9jc3Mvc2ItYWRtaW4tMi5jc3MuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./assets/css/sb-admin-2.css\n");
+
+/***/ }),
+
 /***/ "./assets/css/style.css":
 /*!******************************!*\
   !*** ./assets/css/style.css ***!
@@ -123,15 +135,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************************************************!*\
-  !*** multi ./node_modules/@fortawesome/fontawesome-free/css/all.css ./node_modules/bootstrap/dist/css/bootstrap.css ./assets/css/style.css ***!
-  \*********************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** multi ./node_modules/@fortawesome/fontawesome-free/css/all.css ./node_modules/bootstrap/dist/css/bootstrap.css ./assets/css/style.css ./assets/css/sb-admin-2.css ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\cbh4o\OneDrive\Desktop\Calc\my_flask_app\node_modules\@fortawesome\fontawesome-free\css\all.css */"./node_modules/@fortawesome/fontawesome-free/css/all.css");
 __webpack_require__(/*! C:\Users\cbh4o\OneDrive\Desktop\Calc\my_flask_app\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
-module.exports = __webpack_require__(/*! C:\Users\cbh4o\OneDrive\Desktop\Calc\my_flask_app\assets\css\style.css */"./assets/css/style.css");
+__webpack_require__(/*! C:\Users\cbh4o\OneDrive\Desktop\Calc\my_flask_app\assets\css\style.css */"./assets/css/style.css");
+module.exports = __webpack_require__(/*! C:\Users\cbh4o\OneDrive\Desktop\Calc\my_flask_app\assets\css\sb-admin-2.css */"./assets/css/sb-admin-2.css");
 
 
 /***/ })

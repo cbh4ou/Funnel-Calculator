@@ -27,6 +27,7 @@ module.exports = {
       path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free', 'css', 'all.css'),
       path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'css', 'bootstrap.css'),
       path.join(__dirname, 'assets', 'css', 'style.css'),
+      path.join(__dirname, 'assets', 'css', 'sb-admin-2.css'),
     ],
   },
   mode: debug,
