@@ -63,3 +63,36 @@ class User(UserMixin, PkModel):
     def __repr__(self):
         """Represent instance as a unique string."""
         return f"<User({self.username!r})>"
+
+class Cost(PkModel):
+    """A user of the app."""
+
+    __tablename__ = "costs"
+    product_name = Column(db.String(80), unique=False, nullable=False)
+    product_cost = Column(db.Integer(), unique=False, nullable=False)
+    encore = Column(db.Integer(), unique=False, nullable=False)
+    affiliate = Column(db.Integer(), nullable=True)
+    shipping= Column(db.Integer(), nullable=True, default=0)
+    virtual_product = Column(db.Boolean(), default=False)
+
+
+    @property
+    def __repr__(self):
+        """Represent instance as a unique string."""
+        return f"<Cost({self.product_name!r})>"
+
+class Funnel(PkModel):
+    """A user of the app."""
+
+    __tablename__ = "funnels"
+    funnel_name = Column(db.String(80), unique=True, nullable=False)
+    aov = Column(db.Integer(), unique=False, nullable=False)
+    epc = Column(db.Integer(), unique=False, nullable=False)
+    profit = Column(db.Integer(), nullable=True)
+    
+
+
+    @property
+    def __repr__(self):
+        """Represent instance as a unique string."""
+        return f"<Cost({self.funnel_name!r})>"

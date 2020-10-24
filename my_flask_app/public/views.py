@@ -43,7 +43,7 @@ def home():
     return render_template("public/newhome.html", form=form)
 
 
-@blueprint.route("/logout/")
+@blueprint.route("/logout")
 @login_required
 def logout():
     """Logout."""
@@ -75,6 +75,11 @@ def about():
     """About page."""
     form = LoginForm(request.form)
     return render_template("public/about.html", form=form)
+
+@blueprint.route("/costs")
+def global_costs():
+    """About page."""
+    return render_template("public/costs.html")
 
 @blueprint.route("/404")
 def test():
