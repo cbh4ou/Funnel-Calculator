@@ -96,3 +96,19 @@ class Funnel(PkModel):
     def __repr__(self):
         """Represent instance as a unique string."""
         return f"<Cost({self.funnel_name!r})>"
+
+class Orders(PkModel):
+    """A user of the app."""
+
+    __tablename__ = "orders"
+    funnel_id = Column(db.String(80), unique=True, nullable=False)
+    product_id = Column(db.Integer(), unique=False, nullable=False)
+    product_cost = Column(db.Integer(), unique=False, nullable=False)
+    date_inserted = Column(db.Date(), nullable=True)
+    
+
+
+    @property
+    def __repr__(self):
+        """Represent instance as a unique string."""
+        return f"<Cost({self.funnel_name!r})>"

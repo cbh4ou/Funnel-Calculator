@@ -50,7 +50,7 @@ textarea {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 0px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999999;
@@ -83,4 +83,8 @@ footer .footer-nav {
   float: right;
   margin-right: 25px;
   list-style: none;
+}
+
+#product-cost-form {
+  margin-top: 10px;
 }

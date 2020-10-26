@@ -38,10 +38,11 @@
 
 
     
-    <!-- JavaScript at the bottom for fast page loading -->
-    <script src="{{ static_url_for('static', filename='build/main_js.bundle.js') }}"></script>
+    
 
     <!-- Custom Javascript -->
+    <!-- JavaScript at the bottom for fast page loading -->
+    <script src="{{ static_url_for('static', filename='build/main_js.bundle.js') }}"></script>
     {% block js %}{% endblock %}
 
     <!-- Google Analytics -->

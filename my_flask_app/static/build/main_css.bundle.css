@@ -14933,7 +14933,7 @@ textarea {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 0px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999999;
@@ -14968,6 +14968,9 @@ footer .footer-nav {
   list-style: none;
 }
 
+#product-cost-form {
+  margin-top: 10px;
+}
 /*!
  * Start Bootstrap - SB Admin 2 v4.1.1 (https://startbootstrap.com/themes/sb-admin-2)
  * Copyright 2013-2020 Start Bootstrap

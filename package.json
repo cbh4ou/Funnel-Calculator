@@ -28,9 +28,15 @@
     "@fortawesome/fontawesome-free": "^5.15.0",
     "bootstrap": "^4.5.2",
     "chart.js": "^2.9.4",
+    "datatables.net-autofill-bs4": "^2.3.5",
     "datatables.net-bs4": "^1.10.22",
+    "datatables.net-buttons-bs4": "^1.6.5",
+    "datatables.net-responsive-bs4": "^2.2.6",
+    "datatables.net-scroller-bs4": "^2.0.3",
     "jquery": "^3.5.1",
     "jquery.easing": "^1.4.1",
+    "jszip": "^3.5.0",
+    "pdfmake": "^0.1.68",
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
