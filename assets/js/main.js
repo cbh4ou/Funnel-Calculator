@@ -20,9 +20,11 @@ require.context(
 );
 
 // Your own code
+require('./funnel-form.js');
 require('./plugins.js');
 require('./script.js');
 require('./sb-admin-2.js');
 require('./demo/chart-pie-demo.js');
 require('./demo/chart-area-demo.js');
 require('./demo/datatables-demo.js');
+
