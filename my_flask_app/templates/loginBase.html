@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
-      {% block page_title %} Home | JKW Enterprises{% endblock %}
+      {% block page_title %} Login | JKW Enterprises{% endblock %}
     </title>
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <meta name="author" content="{% block meta_author %}Sebastian Ruml{% endblock %}">
+    <meta name="author" content="{% block meta_author %}Connor Hatcher{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="{{static_url_for('static', filename='build/img/favicon.ico') }}">
@@ -24,16 +24,9 @@
     <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
   </head>
 
-  <body id="page-top">
-    <div id="wrapper">
-      
-    {% include "includes/navbar.html" %}
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main Content -->
-      <div id="content">
-        {% include "includes/topbar.html" %}
+  <body class="bg-gradient-primary">
+    
+        
       {% block content %}{% endblock %}
 
 
@@ -47,7 +40,6 @@
 
     <!-- Google Analytics -->
     </div>
-    {% include "includes/footer.html" %}
       </div>
       <!-- End Content Wrapper -->
 </div>

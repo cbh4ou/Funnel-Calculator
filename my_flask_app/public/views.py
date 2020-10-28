@@ -51,6 +51,11 @@ def logout():
     flash("You are logged out.", "info")
     return redirect(url_for("public.home"))
 
+@blueprint.route("/login")
+def login():
+    """Login."""
+    return render_template("users/login.html")
+
 
 @blueprint.route("/register/", methods=["GET", "POST"])
 def register():

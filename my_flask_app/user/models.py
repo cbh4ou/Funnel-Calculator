@@ -111,4 +111,4 @@ class Orders(PkModel):
     @property
     def __repr__(self):
         """Represent instance as a unique string."""
-        return f"<Cost({self.funnel_name!r})>"
+        return f"<Order({self.funnel_name!r})>"
