@@ -5,24 +5,149 @@
 <!-- Content Wrapper -->
 
 <div class="container">
-  <form>
+  <form id='product-cost-form'>
     <div class="card shadow mb-4">
       <div class="card-header">
-        <h6 class=" m-0 font-weight-bold text-primary">Step 1: </h6>
+        <h6 class=" m-0 font-weight-bold text-primary">Step 1: Choose Option Quantities</h6>
       </div>
       <div class="card-body">
-        <div class="row">
-          <!--  col-md-3  -->
+        <row>
+          <div class="col-md-6">
+
+            <div class="form-group">
+              <label for="">Funnel Name:</label>
+              <input type="email" class="form-control" id="email" placeholder="">
+            </div>
+          </div>
+        </row>
+        <div class='row'>
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label for="prods">Number of Front End Options:</label>
+              <select class="form-control" id="prods">
+                <option>Select Quantity</option>
+              </select>`
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label for="prods">Number of Order Bumps:</label>
+              <select class="form-control" id="prods">
+                <option>Select Quantity</option>
+              </select>`
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label for="prods">Number of Upsell Steps:</label>
+              <select class="form-control" id="prods">
+                <option>Select Quantity</option>
+              </select>`
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class="col-xl-6 offset-xl-6">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary w-100">Next</button>
+            </div>
+          </div>
         </div>
         <!--  row   -->
+
       </div>
-      <button type="submit" class="btn btn-primary">Save Changes</button>
+  
+    <div class="card shadow mb-4">
+      <div class="card-header">
+        <h6 class=" m-0 font-weight-bold text-primary"> Step 2: Front-End Options</h6>
+      </div>
+      <div class="card-body">
+        <div class='row'>
+          <div class="col-xl-6">
+            <div class="form-group">
+              <label for="prods">FE Product Option 1</label>
+              <input type="url" class="form-control" id="url" placeholder="">
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label for="prods">Estimated Take Rate %</label>
+              <input type="url" class="form-control" id="url" placeholder="">
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+ 
+
+      <!--  row   -->
+      <div class='row'>
+        <div class="col-xl-6">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary w-100">Back</button>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary w-100">Next</button>
+          </div>
+        </div>
+      </div>
     </div>
 
+  
+    <div class="card shadow mb-4">
+      <div class="card-header">
+        <h6 class=" m-0 font-weight-bold text-primary"> Step 3: Order Bump Options</h6>
+      </div>
+      <div class="card-body">
+        <div class='row'>
+          <div class="col-xl-6">
+            <div class="form-group">
+              <label for="prods">Order Bump Option 1: Name</label>
+              <input type="url" class="form-control" id="url" placeholder="">
+            </div>
+          </div>
+          <div class="col-xl-2">
+            <div class="form-group">
+              <label for="prods">Product Cost</label>
+              <input type="url" class="form-control" id="url" placeholder="">
+            </div>
+          </div>
+          <div class="col-xl-2">
+            <div class="form-group">
+              <label for="prods">Freight Cost</label>
+              <input type="url" class="form-control" id="url" placeholder="">
+            </div>
+          </div>
+          <div class="col-xl-2">
+            <div class="form-group">
+              <label for="prods">Est. Take Rate %</label>
+              <input type="url" class="form-control" id="url" placeholder="">
+            </div>
+          </div>
 
-  </form>
+        </div>
+        
+      </div>
 
-  <form id='product-cost-form'>
+
+      <!--  row   -->
+      <div class='row'>
+        <div class="col-xl-6">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary w-100">Back</button>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary w-100">Next</button>
+          </div>
+        </div>
+      </div></div>
+  
+
     <div class="card shadow mb-4">
       <div class="card-header">
         <h6 class=" m-0 font-weight-bold text-primary">Product Costs</h6>
@@ -77,10 +202,20 @@
 
 
       <!--  row   -->
-      <button type="submit" class="btn btn-primary">Save Changes</button>
+      <div class='row'>
+        <div class="col-xl-6">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary w-100">Back</button>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary w-100">Save Funnel</button>
+          </div>
+        </div>
+      </div>
     </div>
   </form>
-
 </div>
 <!-- End of Content Wrapper -->
 {% endblock %}

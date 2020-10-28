@@ -86,6 +86,11 @@ def global_costs():
     """About page."""
     return render_template("public/costs.html")
 
+@blueprint.route("/create")
+def create_funnel():
+    """About page."""
+    return render_template("public/funnelform.html")
+
 @blueprint.route("/404")
 def test():
     """About page."""
