@@ -23,8 +23,26 @@
         <div class='row'>
           <div class="col-xl-4">
             <div class="form-group">
-              <label for="prods">Number of Front End Options:</label>
+              <label for="prods">text of Front End Options:</label>
               <select class="form-control" id="prodselect">
+                <option>Select Quantity</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>`
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label for="prods">text of Order Bumps:</label>
+              <select class="form-control" id="bumpselect">
                 <option>Select Quantity</option>
                 <option>1</option>
                 <option>2</option>
@@ -36,18 +54,40 @@
           </div>
           <div class="col-xl-4">
             <div class="form-group">
-              <label for="prods">Number of Order Bumps:</label>
-              <select class="form-control" id="prods">
+              <label for="prods">text of Upsell Steps:</label>
+              <select class="form-control" id="upselect">
                 <option>Select Quantity</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
               </select>`
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label for="cccost">Call Center Cost Per Order</label>
+              <input type="text" class="form-control" id="text" placeholder="">
             </div>
           </div>
           <div class="col-xl-4">
             <div class="form-group">
-              <label for="prods">Number of Upsell Steps:</label>
-              <select class="form-control" id="prods">
-                <option>Select Quantity</option>
-              </select>`
+              <label for="sfcost">Shipping & Fulfillment Cost Per Order</label>
+              <input type="text" class="form-control" id="text" placeholder="">
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label for="advcost">Advertising/CPA Cost Per Order</label>
+              <input type="text" class="form-control" id="text" placeholder="">
             </div>
           </div>
         </div>
@@ -71,20 +111,32 @@
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">FE Product Option 1</label>
-              <input type="url" class="form-control" id="url" placeholder="">
+              <input type="text" class="form-control" id="text" placeholder="">
             </div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Estimated Take Rate %</label>
-              <input type="url" class="form-control" id="url" placeholder="">
+              <label for="prods">Product Cost</label>
+              <input type="text" class="form-control" id="text" placeholder="" >
+            </div>
+          </div>
+          <div class="col-xl-2">
+            <div class="form-group">
+              <label for="prods">Freight Cost</label>
+              <input type="text" class="form-control" id="text" placeholder="" >
+            </div>
+          </div>
+          <div class="col-xl-2">
+            <div class="form-group">
+              <label for="prods">Est. Take Rate %</label>
+              <input type="text" class="form-control" id="text" placeholder="">
             </div>
           </div>
 
         </div>
-        
+
       </div>
- 
+
 
       <!--  row   -->
       <div class='row'>
@@ -101,40 +153,40 @@
       </div>
     </div>
 
-  
+
     <div class="card shadow mb-4 step3 d-none">
       <div class="card-header">
         <h6 class=" m-0 font-weight-bold text-primary"> Step 3: Order Bump Options</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body orderbumps">
         <div class='row'>
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">Order Bump Option 1: Name</label>
-              <input type="url" class="form-control" id="url" placeholder="">
+              <input type="text" class="form-control" id="text" placeholder="">
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Product Cost</label>
-              <input type="url" class="form-control" id="url" placeholder=""readonly>
+              <input type="text" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Freight Cost</label>
-              <input type="url" class="form-control" id="url" placeholder=""readonly>
+              <input type="text" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="url" class="form-control" id="url" placeholder="">
+              <input type="text" class="form-control" id="text" placeholder="">
             </div>
           </div>
 
         </div>
-        
+
       </div>
 
 
@@ -152,44 +204,44 @@
         </div>
       </div>
     </div>
-  
 
-    
 
-  
+
+
+
     <div class="card shadow mb-4 form step4 d-none">
       <div class="card-header">
         <h6 class=" m-0 font-weight-bold text-primary"> Step 4: Upsell Options</h6>
       </div>
-      <div class="card-body">
+      <div class="card-body upsells">
         <div class='row'>
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">Upsell Option 1: Name</label>
-              <input type="url" class="form-control" id="url" placeholder="">
+              <input type="text" class="form-control" id="upsellselect" placeholder="">
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Product Cost</label>
-              <input type="url" class="form-control" id="url" placeholder="" readonly>
+              <input type="text" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Freight Cost</label>
-              <input type="url" class="form-control" id="url" placeholder="" readonly>
+              <input type="text" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="url" class="form-control" id="url" placeholder="">
+              <input type="text" class="form-control" id="text" placeholder="">
             </div>
           </div>
 
         </div>
-        
+
       </div>
 
 
@@ -202,16 +254,18 @@
         </div>
         <div class="col-xl-6">
           <div class="form-group">
-            <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal">Save Changes</button>
+            <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal">Save
+              Changes</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Create Funnel</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -227,7 +281,7 @@
       </div>
     </div>
   </form>
-  
+
 </div>
 <!-- End of Content Wrapper -->
 {% endblock %}

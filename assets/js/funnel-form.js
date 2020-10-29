@@ -36,13 +36,100 @@
     $("#prodselect").change(function () {
         if ($(this).val() > 1) {
             var i;
-            var prodnum = 2
+            var prodnum = 2;
 
             
 
             for (i = $(this).val(); i > 1; i--) {
-                var div = String.format('<div class="row"><div class="col-xl-6"><div class="form-group"><label for="prods">FE Product Option {0}</label><input type="url" class="form-control" id="url" placeholder=""></div></div><div class="col-xl-4"><div class="form-group"><label for="prods">Estimated Take Rate %</label><input type="url" class="form-control" id="url" placeholder=""></div></div></div>', prodnum);
+                var div = String.format('<div class="row"><div class="col-xl-6"><div class="form-group">\
+                <label for="prods">FE Product Option {0}</label><input type="url" class="form-control" id="url" placeholder="">\
+                </div></div><div class="col-xl-4"><div class="form-group"><label for="prods">Estimated Take Rate %</label>\
+                <input type="url" class="form-control" id="url" placeholder=""></div></div></div>', prodnum);
                 $(".feprods").append(div)
+                prodnum++;
+            }
+
+
+
+        }
+    });
+    $("#bumpselect").change(function () {
+        if ($(this).val() > 1) {
+            var i;
+            var prodnum = 2;
+
+            
+
+            for (i = $(this).val(); i > 1; i--) {
+                var div = String.format('<div class="row">\
+                <div class="col-xl-6">\
+                  <div class="form-group">\
+                    <label for="prods">Order Bump Option {0}: Name</label>\
+                    <input type="url" class="form-control" id="url" placeholder="">\
+                  </div>\
+                </div>\
+                <div class="col-xl-2">\
+                  <div class="form-group">\
+                    <label for="prods">Product Cost</label>\
+                    <input type="url" class="form-control" id="url" placeholder="" ="">\
+                  </div>\
+                </div>\
+                <div class="col-xl-2">\
+                  <div class="form-group">\
+                    <label for="prods">Freight Cost</label>\
+                    <input type="url" class="form-control" id="url" placeholder="" ="">\
+                  </div>\
+                </div>\
+                <div class="col-xl-2">\
+                  <div class="form-group">\
+                    <label for="prods">Est. Take Rate %</label>\
+                    <input type="url" class="form-control" id="url" placeholder="">\
+                  </div>\
+                </div>\
+              </div>', prodnum);
+                $(".orderbumps").append(div)
+                prodnum++;
+            }
+
+
+
+        }
+    });
+    $("#upselect").change(function () {
+        if ($(this).val() > 1) {
+            var i;
+            var prodnum = 2;
+
+            
+
+            for (i = $(this).val(); i > 1; i--) {
+                var div = String.format('<div class="row">\
+                <div class="col-xl-6">\
+                  <div class="form-group">\
+                    <label for="prods">Upsell Option {0}: Name</label>\
+                    <input type="text" class="form-control" id="text" placeholder="">\
+                  </div>\
+                </div>\
+                <div class="col-xl-2">\
+                  <div class="form-group">\
+                    <label for="prods">Product Cost</label>\
+                    <input type="text" class="form-control" id="text" placeholder="" ="">\
+                  </div>\
+                </div>\
+                <div class="col-xl-2">\
+                  <div class="form-group">\
+                    <label for="prods">Freight Cost</label>\
+                    <input type="text" class="form-control" id="text" placeholder="" ="">\
+                  </div>\
+                </div>\
+                <div class="col-xl-2">\
+                  <div class="form-group">\
+                    <label for="prods">Est. Take Rate %</label>\
+                    <input type="text" class="form-control" id="text" placeholder="">\
+                  </div>\
+                </div>\
+              </div>', prodnum);
+                $(".upsells").append(div)
                 prodnum++;
             }
 

@@ -10,8 +10,9 @@ from my_flask_app.extensions import bcrypt
 
 class Role(PkModel):
     """A role for a user."""
-
+    
     __tablename__ = "roles"
+    __table_args__ = {'extend_existing': True} 
     name = Column(db.String(80), unique=True, nullable=False)
     user_id = reference_col("users", nullable=True)
     user = relationship("User", backref="roles")
@@ -29,6 +30,7 @@ class User(UserMixin, PkModel):
     """A user of the app."""
 
     __tablename__ = "users"
+    __table_args__ = {'extend_existing': True} 
     username = Column(db.String(80), unique=True, nullable=False)
     email = Column(db.String(80), unique=True, nullable=False)
     #: The hashed password
@@ -68,13 +70,15 @@ class Cost(PkModel):
     """A user of the app."""
 
     __tablename__ = "costs"
-    product_name = Column(db.String(80), unique=False, nullable=False)
-    product_cost = Column(db.Integer(), unique=False, nullable=False)
-    encore = Column(db.Integer(), unique=False, nullable=False)
-    affiliate = Column(db.Integer(), nullable=True)
+    __table_args__ = {'extend_existing': True} 
+    product_name = Column(db.String(80), unique=True, nullable=False)
+    product_cost = Column(db.Integer(), unique=False, nullable=False,  default=0)
+    affiliate = Column(db.Integer(), nullable=True, default=0)
+    fe_price = Column(db.Integer(), nullable=True, default=0)
     shipping= Column(db.Integer(), nullable=True, default=0)
-    virtual_product = Column(db.Boolean(), default=False)
-
+    funnel_id = Column(db.Integer(), db.ForeignKey('funnels.id', ondelete="CASCADE"))
+    funnel = relationship("Funnel", back_populates="product")
+    
 
     @property
     def __repr__(self):
@@ -85,11 +89,17 @@ class Funnel(PkModel):
     """A user of the app."""
 
     __tablename__ = "funnels"
+    __table_args__ = {'extend_existing': True} 
     funnel_name = Column(db.String(80), unique=True, nullable=False)
     aov = Column(db.Integer(), unique=False, nullable=False)
     epc = Column(db.Integer(), unique=False, nullable=False)
     profit = Column(db.Integer(), nullable=True)
-    
+    aff_cost = Column(db.Integer(), nullable=True)
+    product = relationship(
+        "Cost", back_populates="funnel",
+        cascade="all, delete",
+        passive_deletes=True
+    )
 
 
     @property
