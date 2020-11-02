@@ -37,3 +37,6 @@ class LoginForm(FlaskForm):
             self.username.errors.append("User not activated")
             return False
         return True
+class FunnelForm(FlaskForm):
+    """Funnel Create Form"""
+    pass

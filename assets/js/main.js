@@ -11,7 +11,7 @@ require('popper.js');
 require('bootstrap');
 require('chart.js');
 require('datatables.net-bs4');
-
+require('jquery-form');
 
 require.context(
   '../img', // context folder
@@ -20,6 +20,7 @@ require.context(
 );
 
 // Your own code
+
 require('./funnel-form.js');
 require('./plugins.js');
 require('./script.js');

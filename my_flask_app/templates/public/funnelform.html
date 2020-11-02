@@ -5,7 +5,8 @@
 <!-- Content Wrapper -->
 
 <div class="container">
-  <form id='product-cost-form'>
+  <form  id='product-cost-form'>
+    {{ form.csrf_token }}
     <div class="card shadow mb-4 step1">
       <div class="card-header">
         <h6 class=" m-0 font-weight-bold text-primary">Step 1: Choose Option Quantities</h6>
@@ -16,15 +17,15 @@
 
             <div class="form-group">
               <label for="">Funnel Name:</label>
-              <input type="email" class="form-control" id="email" placeholder="">
+              <input type="text" class="form-control" id="funnelname" name='funnelname' placeholder="">
             </div>
           </div>
         </row>
         <div class='row'>
           <div class="col-xl-4">
             <div class="form-group">
-              <label for="prods">text of Front End Options:</label>
-              <select class="form-control" id="prodselect">
+              <label for="prods">Number of Front End Options:</label>
+              <select class="form-control" id="prodselect"  name='feoptions'>
                 <option>Select Quantity</option>
                 <option>1</option>
                 <option>2</option>
@@ -41,8 +42,8 @@
           </div>
           <div class="col-xl-4">
             <div class="form-group">
-              <label for="prods">text of Order Bumps:</label>
-              <select class="form-control" id="bumpselect">
+              <label for="prods">Number of Order Bumps:</label>
+              <select class="form-control" id="bumpselect" name="bumpoptions">
                 <option>Select Quantity</option>
                 <option>1</option>
                 <option>2</option>
@@ -54,8 +55,8 @@
           </div>
           <div class="col-xl-4">
             <div class="form-group">
-              <label for="prods">text of Upsell Steps:</label>
-              <select class="form-control" id="upselect">
+              <label for="prods">Number of Upsell Steps:</label>
+              <select class="form-control" id="upselect" name="upselloptions">
                 <option>Select Quantity</option>
                 <option>1</option>
                 <option>2</option>
@@ -75,19 +76,19 @@
           <div class="col-xl-4">
             <div class="form-group">
               <label for="cccost">Call Center Cost Per Order</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="number" min="0" name="call_cost" class="form-control"  placeholder="">
             </div>
           </div>
           <div class="col-xl-4">
             <div class="form-group">
               <label for="sfcost">Shipping & Fulfillment Cost Per Order</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="number" min="0" name="encore_cost" class="form-control"  placeholder="">
             </div>
           </div>
           <div class="col-xl-4">
             <div class="form-group">
               <label for="advcost">Advertising/CPA Cost Per Order</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="number" min="0" name = "cpa_cost" class="form-control"placeholder="">
             </div>
           </div>
         </div>
@@ -108,33 +109,39 @@
       </div>
       <div class="card-body feprods">
         <div class='row'>
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label for="prods">Front End Take Rate</label>
+              <input type="text" name="fe_tr" class="form-control"  placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class='row'>
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">FE Product Option 1</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="text" name="prod1"class="form-control" id="text" placeholder="">
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Product Cost</label>
-              <input type="text" class="form-control" id="text" placeholder="" >
+              <label for="prods">Product Price</label>
+              <input type="number" min="0" name="prod_price1" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Freight Cost</label>
-              <input type="text" class="form-control" id="text" placeholder="" >
+              <label for="prods">Product/Freight Cost</label>
+              <input type="number" min="0" name="prod_cost1" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="number" min="0" name="prod_tr1" class="form-control" id="text" placeholder="">
             </div>
           </div>
-
         </div>
-
       </div>
 
 
@@ -160,33 +167,39 @@
       </div>
       <div class="card-body orderbumps">
         <div class='row'>
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label for="prods">Order Bump Take Rate</label>
+              <input type="text" name="orderbump_tr" class="form-control"  placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class='row'>
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">Order Bump Option 1: Name</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="text" name="order_bump1" class="form-control" id="text" placeholder="">
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Product Cost</label>
-              <input type="text" class="form-control" id="text" placeholder="" >
+              <label for="prods">Product Price</label>
+              <input type="number" min="0" name="ob_price1"class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Freight Cost</label>
-              <input type="text" class="form-control" id="text" placeholder="" >
+              <label for="prods">Product/Freight Cost</label>
+              <input type="number" min="0" name="ob_cost1" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="number" min="0" name="ob_tr1" class="form-control" id="text" placeholder="">
             </div>
           </div>
-
         </div>
-
       </div>
 
 
@@ -215,33 +228,39 @@
       </div>
       <div class="card-body upsells">
         <div class='row'>
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label for="prods">Upsell Take Rate</label>
+              <input type="text" name="upsell_tr" class="form-control"  placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class='row'>
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">Upsell Option 1: Name</label>
-              <input type="text" class="form-control" id="upsellselect" placeholder="">
+              <input type="text" name="up_name1" class="form-control" id="upsellselect" placeholder="">
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Product Cost</label>
-              <input type="text" class="form-control" id="text" placeholder="" >
+              <label for="prods">Product Price</label>
+              <input type="number" min="0" name="up_price1"class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Freight Cost</label>
-              <input type="text" class="form-control" id="text" placeholder="" >
+              <label for="prods">Product/Freight Cost</label>
+              <input type="number" min="0" name="up_cost1" class="form-control" id="text" placeholder="" >
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="text" class="form-control" id="text" placeholder="">
+              <input type="number" min="0" name="up_tr1" class="form-control" id="text" placeholder="">
             </div>
           </div>
-
         </div>
-
       </div>
 
 
@@ -281,7 +300,6 @@
       </div>
     </div>
   </form>
-
 </div>
 <!-- End of Content Wrapper -->
 {% endblock %}
