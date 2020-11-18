@@ -1,32 +1,39 @@
-{% extends "base.html" %}
+{% extends "funnelForms.html" %}
 
 
 {% block content %}
 <!-- Content Wrapper -->
 
 <div class="container">
-  <form  id='product-cost-form'>
+  <form  id='product-cost-form' class="was-validated">
     {{ form.csrf_token }}
     <div class="card shadow mb-4 step1">
       <div class="card-header">
         <h6 class=" m-0 font-weight-bold text-primary">Step 1: Choose Option Quantities</h6>
       </div>
       <div class="card-body">
-        <row>
-          <div class="col-md-6">
+        <div class='row'>
+          <div class="col-xl-4">
 
             <div class="form-group">
-              <label for="">Funnel Name:</label>
-              <input type="text" class="form-control" id="funnelname" name='funnelname' placeholder="">
+              <label  class="control-label" for="">Funnel Name:</label>
+              <input type="text" class="form-control" id="funnelname" name='funnelname' placeholder=""  required>
+              <div class="invalid-feedback">Please fill out this field.</div>
             </div>
           </div>
-        </row>
+          <div class="col-xl-4">
+            <div class="form-group">
+              <label  class="control-label" for="">Incoming Traffic:</label>
+              <input type="number" min="0" class="form-control" name='incoming_traffic' placeholder=""  required>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+          </div>
+        </div>
         <div class='row'>
           <div class="col-xl-4">
             <div class="form-group">
               <label for="prods">Number of Front End Options:</label>
-              <select class="form-control" id="prodselect"  name='feoptions'>
-                <option>Select Quantity</option>
+              <select class="form-control" id="prodselect"  name='feoptions' required>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -43,8 +50,7 @@
           <div class="col-xl-4">
             <div class="form-group">
               <label for="prods">Number of Order Bumps:</label>
-              <select class="form-control" id="bumpselect" name="bumpoptions">
-                <option>Select Quantity</option>
+              <select class="form-control" id="bumpselect" name="bumpoptions" required>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -56,8 +62,7 @@
           <div class="col-xl-4">
             <div class="form-group">
               <label for="prods">Number of Upsell Steps:</label>
-              <select class="form-control" id="upselect" name="upselloptions">
-                <option>Select Quantity</option>
+              <select class="form-control" id="upselect" name="upselloptions" required>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -76,19 +81,19 @@
           <div class="col-xl-4">
             <div class="form-group">
               <label for="cccost">Call Center Cost Per Order</label>
-              <input type="number" min="0" name="call_cost" class="form-control"  placeholder="">
+              <input type="number" step="0.01"  min="0" name="call_cost" class="form-control"  placeholder="" required>
             </div>
           </div>
           <div class="col-xl-4">
             <div class="form-group">
               <label for="sfcost">Shipping & Fulfillment Cost Per Order</label>
-              <input type="number" min="0" name="encore_cost" class="form-control"  placeholder="">
+              <input type="number" step="0.01" min="0" name="encore_cost" class="form-control"  placeholder="" required>
             </div>
           </div>
           <div class="col-xl-4">
             <div class="form-group">
               <label for="advcost">Advertising/CPA Cost Per Order</label>
-              <input type="number" min="0" name = "cpa_cost" class="form-control"placeholder="">
+              <input type="number" step="0.01"  min="0" name = "cpa_cost" class="form-control"placeholder="" required>
             </div>
           </div>
         </div>
@@ -111,8 +116,15 @@
         <div class='row'>
           <div class="col-xl-3">
             <div class="form-group">
-              <label for="prods">Front End Take Rate</label>
-              <input type="text" name="fe_tr" class="form-control"  placeholder="">
+              <label  class="control-label" for="">Unique Views:</label>
+              <input type="number" min="0" class="form-control" name='incoming_traffic' placeholder=""  required>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label for="prods">Front End Take Rate %</label>
+              <input type="number" step=".01" max='100' name="fe_tr" class="form-control"  placeholder="88" required>
             </div>
           </div>
         </div>
@@ -120,25 +132,25 @@
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">FE Product Option 1</label>
-              <input type="text" name="prod1"class="form-control" id="text" placeholder="">
+              <input type="text" name="prod1"class="form-control" id="text" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Product Price</label>
-              <input type="number" min="0" name="prod_price1" class="form-control" id="text" placeholder="" >
+              <input type="number" step="0.01" min="0" name="prod_price1" class="form-control" id="number" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Product/Freight Cost</label>
-              <input type="number" min="0" name="prod_cost1" class="form-control" id="text" placeholder="" >
+              <input type="number" step="0.01" min="0" name="prod_cost1" class="form-control" id="number" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="number" min="0" name="prod_tr1" class="form-control" id="text" placeholder="">
+              <input type="number" step="0.01" max="100" min="0" name="prod_tr1" class="form-control" id="text" placeholder="" required>
             </div>
           </div>
         </div>
@@ -167,36 +179,28 @@
       </div>
       <div class="card-body orderbumps">
         <div class='row'>
-          <div class="col-xl-3">
-            <div class="form-group">
-              <label for="prods">Order Bump Take Rate</label>
-              <input type="text" name="orderbump_tr" class="form-control"  placeholder="">
-            </div>
-          </div>
-        </div>
-        <div class='row'>
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">Order Bump Option 1: Name</label>
-              <input type="text" name="order_bump1" class="form-control" id="text" placeholder="">
+              <input type="text" name="order_bump1" class="form-control" id="text" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Product Price</label>
-              <input type="number" min="0" name="ob_price1"class="form-control" id="text" placeholder="" >
+              <input type="number" step="0.01" min="0" name="ob_price1"class="form-control" id="text" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Product/Freight Cost</label>
-              <input type="number" min="0" name="ob_cost1" class="form-control" id="text" placeholder="" >
+              <input type="number" step="0.01"  min="0" name="ob_cost1" class="form-control" id="text" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="number" min="0" name="ob_tr1" class="form-control" id="text" placeholder="">
+              <input type="number" step="0.01" max="100" min="0" name="ob_tr1" class="form-control" id="text" placeholder="" required>
             </div>
           </div>
         </div>
@@ -228,36 +232,51 @@
       </div>
       <div class="card-body upsells">
         <div class='row'>
-          <div class="col-xl-3">
-            <div class="form-group">
-              <label for="prods">Upsell Take Rate</label>
-              <input type="text" name="upsell_tr" class="form-control"  placeholder="">
-            </div>
-          </div>
-        </div>
-        <div class='row'>
           <div class="col-xl-6">
             <div class="form-group">
               <label for="prods">Upsell Option 1: Name</label>
-              <input type="text" name="up_name1" class="form-control" id="upsellselect" placeholder="">
+              <input type="text" name="up_name1" class="form-control" id="upsellselect" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Product Price</label>
-              <input type="number" min="0" name="up_price1"class="form-control" id="text" placeholder="" >
+              <label for="prods">Total Sales</label>
+              <input type="number" step="0.01" min="0" name="total_revenue1"class="form-control" id="text" placeholder="" required>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
-              <label for="prods">Product/Freight Cost</label>
-              <input type="number" min="0" name="up_cost1" class="form-control" id="text" placeholder="" >
+              <label for="prods"># Products Offered</label>
+              <input type="number"  min="1" name="products_offered1" class="form-control" id="text" placeholder="" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label  class="control-label" for="">Avg Cost of Products Offered:</label>
+              <input type="number" min="0" class="form-control" name='up_cost_avg1' placeholder=""  required>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label  class="control-label" for="">Number of Sales:</label>
+              <input type="number" min="0" class="form-control" name='total_orders1' placeholder=""  required>
+              <div class="invalid-feedback">Please fill out this field.</div>
             </div>
           </div>
           <div class="col-xl-2">
             <div class="form-group">
               <label for="prods">Est. Take Rate %</label>
-              <input type="number" min="0" name="up_tr1" class="form-control" id="text" placeholder="">
+              <input type="number" step="0.01" max="100" min="0" name="up_tr1" class="form-control" id="text" placeholder="" required>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label  class="control-label" for="">Unique Views:</label>
+              <input type="number" min="0" class="form-control" name='upsell_traffic1' placeholder=""  required>
+              <div class="invalid-feedback">Please fill out this field.</div>
             </div>
           </div>
         </div>

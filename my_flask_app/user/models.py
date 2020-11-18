@@ -71,14 +71,20 @@ class Cost(PkModel):
 
     __tablename__ = "costs"
     __table_args__ = {'extend_existing': True} 
-    product_name = Column(db.String(80), unique=True, nullable=False)
-    product_cost = Column(db.Integer(), unique=False, nullable=False,  default=0)
-    affiliate = Column(db.Integer(), nullable=True, default=0)
-    fe_price = Column(db.Integer(), nullable=True, default=0)
-    shipping= Column(db.Integer(), nullable=True, default=0)
+    product_name = Column(db.String(80), nullable=False)
+    product_type = Column(db.String(80))
+    cost = Column(db.Integer(), unique=False, nullable=False)
+    price = Column(db.Integer(), nullable=True, default=0)
+    shipping= Column(db.Integer(), nullable=True, default=.40)
+    incoming_traffic = Column(db.Integer(), nullable=True, default=0)
+    take_rate = Column(db.Integer(), nullable=True, default=0)
+    total_revenue = Column(db.Integer(), nullable=True, default=0)
+    total_orders = Column(db.Integer(), nullable=True, default=0)
+    products_offered = Column(db.Integer(), nullable=True, default=0)
+    up_cost_avg = Column(db.Integer(), nullable=True, default=0)
     funnel_id = Column(db.Integer(), db.ForeignKey('funnels.id', ondelete="CASCADE"))
     funnel = relationship("Funnel", back_populates="product")
-    
+
 
     @property
     def __repr__(self):
@@ -91,10 +97,12 @@ class Funnel(PkModel):
     __tablename__ = "funnels"
     __table_args__ = {'extend_existing': True} 
     funnel_name = Column(db.String(80), unique=True, nullable=False)
-    aov = Column(db.Integer(), unique=False, nullable=False)
-    epc = Column(db.Integer(), unique=False, nullable=False)
-    profit = Column(db.Integer(), nullable=True)
-    aff_cost = Column(db.Integer(), nullable=True)
+    shipping_cost = Column(db.Integer())
+    callcenter_cost = Column(db.Integer())
+    advertising_cost = Column(db.Integer())
+    fe_percent = Column(db.Integer())
+    traffic = Column(db.Integer())
+    has_salespage = Column(db.Boolean())
     product = relationship(
         "Cost", back_populates="funnel",
         cascade="all, delete",

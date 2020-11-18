@@ -23,6 +23,8 @@ module.exports = {
   context: __dirname,
   entry: {
     main_js: './assets/js/main',
+    funnel_js: './assets/js/funnel_form',
+    stats_js: './assets/js/funnel_stats',
     main_css: [
       path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free', 'css', 'all.css'),
       path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'css', 'bootstrap.css'),

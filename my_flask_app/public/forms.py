@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Public forms."""
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField
+from wtforms import PasswordField, StringField, BooleanField
 from wtforms.validators import DataRequired
 
 from my_flask_app.user.models import User
@@ -12,7 +12,7 @@ class LoginForm(FlaskForm):
 
     username = StringField("Username", validators=[DataRequired()])
     password = PasswordField("Password", validators=[DataRequired()])
-
+    remember_me = BooleanField('Remember Me')
     def __init__(self, *args, **kwargs):
         """Create instance."""
         super(LoginForm, self).__init__(*args, **kwargs)

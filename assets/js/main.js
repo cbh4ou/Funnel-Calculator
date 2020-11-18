@@ -10,8 +10,10 @@ require('jquery');
 require('popper.js');
 require('bootstrap');
 require('chart.js');
+require('datatables.net');
 require('datatables.net-bs4');
 require('jquery-form');
+require('bootstrap-validator');
 
 require.context(
   '../img', // context folder
@@ -20,12 +22,10 @@ require.context(
 );
 
 // Your own code
-
-require('./funnel-form.js');
+require('./demo/datatables-demo.js');
 require('./plugins.js');
 require('./script.js');
 require('./sb-admin-2.js');
-require('./demo/chart-pie-demo.js');
-require('./demo/chart-area-demo.js');
-require('./demo/datatables-demo.js');
+
+
 

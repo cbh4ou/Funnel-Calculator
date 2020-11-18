@@ -41,6 +41,7 @@ def register_extensions(app):
     db.init_app(app)
     csrf_protect.init_app(app)
     login_manager.init_app(app)
+    login_manager.login_view = 'public.login'
     debug_toolbar.init_app(app)
     migrate.init_app(app, db)
     flask_static_digest.init_app(app)

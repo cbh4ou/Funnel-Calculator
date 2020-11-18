@@ -35,10 +35,7 @@
       <div id="collapseFunnels" class="collapse" aria-labelledby="headingFunnels" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Funnel Editor:</h6>
-          <a class="collapse-item" href="{{ url_for('funnels.show_form') }}">Create Funnel</a>
-          <a class="collapse-item" href="/edit">Edit Funnel</a>
-          <h6 class="collapse-header">Review Funnel KPIs:</h6>
-          <a class="collapse-item" href="/stats">Funnel Stats</a>
+          <a class="collapse-item" href="{{ url_for('funnels.funnel_creator') }}">Create Funnel</a>
         </div>
       </div>
     </li>
@@ -49,7 +46,7 @@
       </a>
       <div id="collapseCosts" class="collapse" aria-labelledby="headingCosts" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Adjust Costs & See Stats:</h6>
+          <h6 class="collapse-header">Adjust Costs:</h6>
           <a class="collapse-item" href="/costs">Modify Costs</a>
         </div>
       </div>
@@ -73,22 +70,18 @@
       <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Settings:</h6>
-          <a class="collapse-item" href="/register">Create Affiliate</a>
-          <a class="collapse-item" href="/forgot-password">Modify Affiliate Views</a>
-          <div class="collapse-divider"></div>
-          <h6 class="collapse-header">User  Settings:</h6>
-          <a class="collapse-item" href="">Reset Password</a>
-          <a class="collapse-item" href="">Create New User</a>
+          <a class="collapse-item" href="/password-reset">Reset Password</a>
+          <a class="collapse-item" href="/manage/users">Create New User</a>
         </div>
       </div>
     </li>
 
-    <!-- Nav Item - Charts -->
+    <!-- Nav Item - Logouts
     <li class="nav-item">
       <a class="nav-link" href="/logout">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>Logout</span></a>
-    </li>
+    </li>-->
 
 
     <!-- Divider -->

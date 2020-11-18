@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
-      {% block page_title %} Home | JKW Enterprises{% endblock %}
-    </title>
+    {% if data: %}
+    
+      {% block page_title %} {{data['name']}} | Funnel Stats | JKW Enterprises{% endblock %}
+    {% else %}
+       Home | JKW Enterprises
+    {% endif %}
+  </title>
     <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta name="author" content="{% block meta_author %}Sebastian Ruml{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,8 +47,9 @@
 
     <!-- Custom Javascript -->
     <!-- JavaScript at the bottom for fast page loading -->
-    <script src="{{ static_url_for('static', filename='build/main_js.bundle.js') }}"></script>
     {% block js %}{% endblock %}
+    <script src="{{ static_url_for('static', filename='build/main_js.bundle.js') }}"></script>
+    
 
     <!-- Google Analytics -->
     </div>
